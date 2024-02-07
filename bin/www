@@ -17,8 +17,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 var service=require('../app')
 app.use(cors()).options('*', cors()); 
 app.use('/',service);
- app.listen(3000, '0.0.0.0', function() {
-     console.log('Listening to port:  ' + 3000);
+ app.listen(3000, '0.0.0.0',(err,res)=>{
+    if(err){
+        console.log("server not running port 3000")
+    }else{
+        console.log("server  running port 3000")
+    }
  });
 
 
