@@ -8,7 +8,7 @@ app.use(cors()).options('*', cors());
 app.use(express.json());
 app.post('/insert',services.InsertData)
 app.get('/get',services.GetData)
-// app.put("/update/:id",services.update)
+app.put("/update/:id",services.update)
 app.delete("/delete/:id",services.delete)
 
  module.exports = app;
